@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/gree/xgree/bootcamp/services/ppgacha/frontend/ppgacha/htdocs'
+let g:netrw_dirhist_2='/home/gree/xgree/bootcamp/services/ppgacha/frontend/ppgacha/htdocs/css'
+let g:netrw_dirhist_3='/home/gree/xgree/bootcamp/services/ppgacha/frontend/ppgacha/template/ja_JP'
+let g:netrw_dirhist_4='/home/haruka-iwao/.ssh'
