@@ -10,7 +10,6 @@ zstyle :compinstall filename '$HOME/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-alias ls='ls --color=auto'
 
 ## プロンプトの設定
 autoload colors
@@ -51,6 +50,10 @@ function _update_vcs_info_msg() {
 }
 add-zsh-hook precmd _update_vcs_info_msg
 RPROMPT="%1(v|%F{green}%1v%f|)"
+
+if [ -e $HOME/.zsh/`uname`/rc.zsh ]; then
+    source $HOME/.zsh/`uname`/rc.zsh
+fi
 
 if [ -e $HOME/.zsh/local/rc.zsh ]; then
     source $HOME/.zsh/local/rc.zsh 
