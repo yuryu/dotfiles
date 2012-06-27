@@ -1,0 +1,38 @@
+# エンコーディング
+# defencodig utf-8
+
+## Prefixキーの設定
+escape ^Zz
+
+# スタートアップメニューの削除
+startup_message off
+
+# 端末が落ちたら自動的にデタッチする
+autodetach on
+
+# hardstatus alwayslastline "%{= rw} %H %{= wk}%-Lw%{= bw}%n%f* %t%{= wk}%+Lw %{= wk}%=%{= gk} %y/%m/%d %c "
+
+# hardstatus and caption
+hardstatus on
+hardstatus alwayslastline '%{= .b}%H%{-} %L=%-w%45L>%{=u b.}%n %t%{-}%+w %-17<%=%m/%d %02c:%s'
+caption always '%?%F%{= bw}%:%{= wk}%?%2n%f%07=%t%='
+sorendition '+r .b'
+
+# 現在の背景色で消去する
+defbce on
+
+# 256色表示設定
+term xterm-256color
+
+# マウスでスクロール出来るようにする
+termcapinfo xterm* ti@:te@
+
+# 別画面サポート。Vimやless使うときに便利
+altscreen on
+
+# ログファイルのファイル名
+logfile "$HOME/.screen/screen-%Y%m%d-%n.log"
+# 標準でログをとる
+deflog on
+
+
