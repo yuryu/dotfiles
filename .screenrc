@@ -10,7 +10,6 @@ startup_message off
 # 端末が落ちたら自動的にデタッチする
 autodetach on
 
-
 # termcapinfo xterm*|rxvt*|kterm*|Eterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
 # defhstatus "screen ^E (^Et) | $USER@^EH"
 # hardstatus off
@@ -30,7 +29,7 @@ defbce on
 term xterm-256color
 
 # マウスでスクロール出来るようにする
-termcapinfo xterm* ti@:te@
+# termcapinfo xterm* ti@:te@
 
 # 別画面サポート。Vimやless使うときに便利
 altscreen on
