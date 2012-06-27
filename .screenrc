@@ -10,13 +10,18 @@ startup_message off
 # 端末が落ちたら自動的にデタッチする
 autodetach on
 
-# hardstatus alwayslastline "%{= rw} %H %{= wk}%-Lw%{= bw}%n%f* %t%{= wk}%+Lw %{= wk}%=%{= gk} %y/%m/%d %c "
+
+termcapinfo xterm*|rxvt*|kterm*|Eterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
+defhstatus "screen ^E (^Et) | $USER@^EH"
+hardstatus off
 
 # hardstatus and caption
 hardstatus on
 hardstatus alwayslastline '%{= .b}%H%{-} %L=%-w%45L>%{=u b.}%n %t%{-}%+w %-17<%=%m/%d %02c:%s'
 caption always '%?%F%{= bw}%:%{= wk}%?%2n%f%07=%t%='
 sorendition '+r .b'
+
+hardstatus alwayslastline "%{= rw} %H %{= wk}%-Lw%{= bw}%n%f* %t%{= wk}%+Lw %{= wk}%=%{= gk} %y/%m/%d %c "
 
 # 現在の背景色で消去する
 defbce on
