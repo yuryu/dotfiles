@@ -83,16 +83,15 @@ if is-at-least 4.3.10; then
   zstyle ':vcs_info:git:*' unstagedstr "-"  # 適当の文字列に変更する
   zstyle ':vcs_info:git:*' formats '(%s)-[%b] %c%u'
   zstyle ':vcs_info:git:*' actionformats '(%s)-[%b|%a] %c%u'
+  function _update_vcs_info_msg() {
+      psvar=()
+      # LANG=en_US.UTF-8 vcs_info
+      LANG=C vcs_info
+      [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+  }
+  add-zsh-hook precmd _update_vcs_info_msg
+  RPROMPT="%1(v|%F{green}%1v%f|)"
 fi
-
-function _update_vcs_info_msg() {
-    psvar=()
-    # LANG=en_US.UTF-8 vcs_info
-    LANG=C vcs_info
-    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-}
-add-zsh-hook precmd _update_vcs_info_msg
-RPROMPT="%1(v|%F{green}%1v%f|)"
 
 if [ -e /etc/zsh_command_not_found ]; then
     source /etc/zsh_command_not_found
