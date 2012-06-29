@@ -57,6 +57,13 @@ esac
 setopt share_history
 setopt hist_ignore_all_dups hist_save_nodups
 
+setopt ignoreeof
+
+setopt auto_cd auto_remove_slash auto_name_dirs
+setopt extended_history hist_ignore_space prompt_subst
+setopt extended_glob list_types always_last_prompt
+setopt cdable_vars sh_word_split auto_param_keys pushd_ignore_dups
+
 autoload -Uz add-zsh-hook
 autoload -Uz colors
 colors
