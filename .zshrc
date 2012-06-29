@@ -67,16 +67,16 @@ setopt cdable_vars sh_word_split auto_param_keys pushd_ignore_dups
 autoload -Uz add-zsh-hook
 autoload -Uz colors
 colors
-autoload -Uz vcs_info
-
-zstyle ':vcs_info:*' enable git svn hg bzr
-zstyle ':vcs_info:*' formats '(%s)-[%b]'
-zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
-zstyle ':vcs_info:(svn|bzr):*' branchformat '%b:r%r'
-zstyle ':vcs_info:bzr:*' use-simple true
 
 autoload -Uz is-at-least
 if is-at-least 4.3.10; then
+  autoload -Uz vcs_info
+  zstyle ':vcs_info:*' enable git svn hg bzr
+  zstyle ':vcs_info:*' formats '(%s)-[%b]'
+  zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
+  zstyle ':vcs_info:(svn|bzr):*' branchformat '%b:r%r'
+  zstyle ':vcs_info:bzr:*' use-simple true
+
   # この check-for-changes が今回の設定するところ
   zstyle ':vcs_info:git:*' check-for-changes true
   zstyle ':vcs_info:git:*' stagedstr "+"    # 適当な文字列に変更する
