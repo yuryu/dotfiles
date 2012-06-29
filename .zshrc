@@ -59,6 +59,7 @@ setopt hist_ignore_all_dups hist_save_nodups
 
 setopt ignoreeof
 
+setopt auto_pushd
 setopt auto_cd auto_remove_slash auto_name_dirs
 setopt extended_history hist_ignore_space prompt_subst
 setopt extended_glob list_types always_last_prompt
