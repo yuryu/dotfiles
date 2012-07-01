@@ -10,6 +10,8 @@ startup_message off
 # 端末が落ちたら自動的にデタッチする
 autodetach on
 
+vbell off
+
 # termcapinfo xterm*|rxvt*|kterm*|Eterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
 # defhstatus "screen ^E (^Et) | $USER@^EH"
 # hardstatus off
