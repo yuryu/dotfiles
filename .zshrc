@@ -11,6 +11,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+alias screen='screen -xRU'
+
 ## プロンプトの設定
 autoload colors
 colors
