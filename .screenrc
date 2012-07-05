@@ -11,6 +11,7 @@ startup_message off
 autodetach on
 
 vbell off
+defscrollback 4096
 
 # termcapinfo xterm*|rxvt*|kterm*|Eterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
 # defhstatus "screen ^E (^Et) | $USER@^EH"
@@ -41,4 +42,6 @@ logfile "$HOME/.screen/screen-%Y%m%d-%n.log"
 # 標準でログをとる
 deflog on
 
+bufferfile "$HOME/screen-exchange"
+bind  ^] eval 'writebuf -e utf8' 'exec sh -c "cat ~/screen-exchange | ~/invoke-pbcopy.sh"' 'echo pasted.'
 
