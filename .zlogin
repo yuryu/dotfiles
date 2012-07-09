@@ -1,4 +1,4 @@
-type -p keychain &> /dev/null && eval `keychain --eval`
+#type -p keychain &> /dev/null && eval `keychain --eval`
 
 if [ -e $HOME/.zsh/`uname`/login.zsh ]; then
     source $HOME/.zsh/`uname`/login.zsh
