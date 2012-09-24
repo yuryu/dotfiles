@@ -2,7 +2,7 @@ set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,default,latin
 
 " theme設定、取りあえず desert
-colorscheme desert
+colorscheme darkblue 
 set mouse="a"
 set nocompatible
 "set number "or nonumber
@@ -37,4 +37,9 @@ set fileformats=unix,dos,mac
 au BufRead,BufNewFile *.tpl set filetype=smarty
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 
+map <C-k><C-k> :Gtags 
+map <C-k><C-f> :Gtags -f %<CR>
+map <C-i> :GtagsCursor<CR>
+map <C-n> :cn<CR>
+map <C-p> :cp<CR>
 
