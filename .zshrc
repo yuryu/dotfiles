@@ -108,3 +108,5 @@ if [ -e $HOME/.zsh/local/rc.zsh ]; then
     source $HOME/.zsh/local/rc.zsh 
 fi
 
+export PATH="$HOME/.cabal/bin:/usr/local/bin:$PATH"
+
