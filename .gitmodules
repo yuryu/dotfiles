@@ -7,3 +7,9 @@
 [submodule ".vim/bundle/vimerl"]
 	path = .vim/bundle/vimerl
 	url = https://github.com/jimenezrick/vimerl.git
+[submodule ".vim/bundle/neco-ghc"]
+	path = .vim/bundle/neco-ghc
+	url = https://github.com/ujihisa/neco-ghc.git
+[submodule ".vim/bundle/ghcmod"]
+	path = .vim/bundle/ghcmod
+	url = https://github.com/eagletmt/ghcmod-vim.git
