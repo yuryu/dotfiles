@@ -13,3 +13,6 @@
 [submodule ".vim/bundle/ghcmod"]
 	path = .vim/bundle/ghcmod
 	url = https://github.com/eagletmt/ghcmod-vim.git
+[submodule ".vim/bundle/vim-ruby"]
+	path = .vim/bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
