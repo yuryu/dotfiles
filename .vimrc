@@ -26,7 +26,6 @@ set cmdheight=2
 set incsearch
 set ignorecase
 set smartcase
-set list
 filetype plugin on
 filetype indent on
 syntax on
