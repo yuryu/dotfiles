@@ -110,3 +110,9 @@ fi
 
 export PATH="$HOME/.cabal/bin:/usr/local/bin:$PATH"
 
+# rbenv
+
+if command -v rbenv > /dev/null 2>&1; then
+    eval "$(rbenv init -)"
+fi
+
