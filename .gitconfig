@@ -3,3 +3,5 @@
 	name = Haruka Iwao
 [color]
 	ui = auto
+[push]
+	default = simple
